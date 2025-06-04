@@ -1,10 +1,28 @@
-// Automatic Rendering: Next.js will automatically wrap your pages with the nearest layout. 
-// This means you don't need to explicitly import the Layout component.
+/**
+ * Home Page Component
+ *
+ * Next.js App Router Concepts:
+ * - Page component automatically becomes the route
+ * - Server Component by default
+ * - Automatically handles static generation
+ * - Can be made interactive with 'use client'
+ *
+ * Layout Structure:
+ * - Hero section with gradient background
+ * - "What I Do" section with grid layout
+ */
 
 export default function Home() {
   return (
     <>
-      {/* Hero Section */}
+      {/* 
+        Hero Section:
+        container mx-auto: Centered container with max-width
+        min-h-[80vh]: Minimum height of 80% viewport height
+        flex items-center justify-center: Center content both vertically and horizontally
+        bg-gradient-to-br: Background gradient from top-left to bottom-right
+        from-blue-50 to-purple-50: Gradient colors
+      */}
       <section
         className="
         container mx-auto
@@ -13,7 +31,23 @@ export default function Home() {
         bg-gradient-to-br from-blue-50 to-purple-50
       "
       >
+        {/* 
+          Content Container:
+          text-center: Center text
+          max-w-3xl: Maximum width for readability
+          mx-auto: Center horizontally
+          px-4: Horizontal padding
+        */}
         <div className="text-center max-w-3xl mx-auto px-4">
+          {/* 
+            Main Heading:
+            text-4xl md:text-6xl: Responsive font size
+            font-bold: Bold weight
+            mb-6: Bottom margin
+            bg-gradient-to-r: Text gradient direction
+            from-blue-600 to-purple-600: Gradient colors
+            text-transparent bg-clip-text: Make text show gradient
+          */}
           <h1
             className="
             text-4xl md:text-6xl
@@ -26,10 +60,16 @@ export default function Home() {
             Welcome to My Portfolio
           </h1>
 
+          {/* 
+            Subtitle:
+            text-xl md:text-2xl: Responsive font size
+            text-gray-600: Medium gray color
+            mb-8: Bottom margin
+          */}
           <p
             className="
             text-xl md:text-2xl
-            text-gray-600
+            text-gray-600/60
             mb-8
           "
           >
@@ -37,6 +77,19 @@ export default function Home() {
             design
           </p>
 
+          {/* 
+            Call to Action Button:
+            inline-block: Inline block display
+            bg-blue-600: Blue background
+            hover:bg-blue-700: Darker blue on hover
+            text-white: White text
+            px-8 py-3: Horizontal and vertical padding
+            rounded-lg: Rounded corners
+            text-lg: Large text
+            transition-colors: Smooth color transition
+            shadow-md: Medium shadow
+            hover:shadow-lg: Larger shadow on hover
+          */}
           <a
             href="/projects"
             className="
@@ -57,20 +110,56 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Content Section */}
+      {/* 
+        Content Section:
+        container mx-auto: Centered container
+        px-4: Horizontal padding
+        py-20: Vertical padding
+      */}
       <section className="container mx-auto px-4 py-20">
-        <h2
+        {/* 
+          Section Heading:
+          text-3xl md:text-4xl: Responsive font size
+          font-bold: Bold weight
+          text-center: Center text
+          mb-12: Bottom margin
+          text-gray-800: Dark gray color
+        */}
+        <h1
           className="
           text-3xl md:text-4xl
           font-bold
-          text-center
+          text-end
+          justify-end
           mb-12
-          text-gray-800
+          bg-gradient-to-r from-purple-600 to-fuchsia-100
+          text-transparent bg-clip-text
         "
         >
           What I Do
-        </h2>
+        </h1>
+        <h1
+          className="
+          text-3xl md:text-4xl
+          font-bold
+          text-end
+          justify-end
+          mb-12
+          bg-gradient-to-r from-purple-600 to-fuchsia-100
+          text-transparent bg-clip-text
+        "
+        >
+          What I Do
+        </h1>
 
+        {/* 
+          Grid Container:
+          grid: Enable grid layout
+          grid-cols-1: Single column on mobile
+          md:grid-cols-2: Two columns on medium screens
+          lg:grid-cols-3: Three columns on large screens
+          gap-8: Gap between grid items
+        */}
         <div
           className="
           grid
@@ -78,7 +167,9 @@ export default function Home() {
           gap-8
         "
         >
-          {/* We'll add service cards in the next step */}
+          <p>navItems</p>
+          <p>navItems</p>
+          <p>navItemss</p>
         </div>
       </section>
     </>
