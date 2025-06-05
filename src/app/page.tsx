@@ -116,60 +116,82 @@ export default function Home() {
         px-4: Horizontal padding
         py-20: Vertical padding
       */}
-      <section className="container mx-auto px-4 py-20">
-        {/* 
-          Section Heading:
-          text-3xl md:text-4xl: Responsive font size
-          font-bold: Bold weight
-          text-center: Center text
-          mb-12: Bottom margin
-          text-gray-800: Dark gray color
-        */}
-        <h1
+      <section className="container mx-auto px-4 md:px-8 py-20">
+        <div
           className="
-          text-3xl md:text-4xl
-          font-bold
-          text-end
-          justify-end
-          mb-12
-          bg-gradient-to-r from-purple-600 to-fuchsia-100
-          text-transparent bg-clip-text
+          flex 
+          flex-row
+          gap-12
+          items-start
+          relative            /* For pseudo-element */
         "
         >
-          What I Do
-        </h1>
-        <h1
-          className="
-          text-3xl md:text-4xl
-          font-bold
-          text-end
-          justify-end
-          mb-12
-          bg-gradient-to-r from-purple-600 to-fuchsia-100
-          text-transparent bg-clip-text
-        "
-        >
-          What I Do
-        </h1>
+          {/* Left Column */}
+          <div
+            className="
+            flex 
+             flex-row
+            md:pr-12          /* Right padding */
+          "
+          >
+            <h1
+              className="
+              text-3xl md:text-4xl
+              font-bold
+              text-end
+              mb-12
+              bg-gradient-to-r from-purple-600 to-fuchsia-100
+              text-transparent bg-clip-text
+            "
+            >
+              What I Do
+            </h1>
+            <h1
+              className="
+              text-3xl md:text-4xl
+              font-bold
+              text-end
+              mb-12
+              bg-gradient-to-r from-purple-600 to-fuchsia-100
+              text-transparent bg-clip-text
+            "
+            >
+              What I Do
+            </h1>
+          </div>
 
-        {/* 
+          {/* Vertical Divider (visible only on desktop) */}
+          <div
+            className="
+            hidden md:block
+     absolute
+            left-1/2
+            top-0
+            bottom-0
+            w-px
+            bg-gray-200
+          "
+          ></div>
+
+          {/* Right Column 
           Grid Container:
           grid: Enable grid layout
           grid-cols-1: Single column on mobile
           md:grid-cols-2: Two columns on medium screens
           lg:grid-cols-3: Three columns on large screens
-          gap-8: Gap between grid items
-        */}
-        <div
-          className="
-          grid
-          grid-cols-1 md:grid-cols-2 lg:grid-cols-3
-          gap-8
-        "
-        >
-          <p>navItems</p>
-          <p>navItems</p>
-          <p>navItemss</p>
+          gap-8: Gap between grid items*/}
+          <div
+            className="
+            w-full md:w-1/2
+            flex flex-col
+            gap-8
+            md:pl-12          /* Left padding */
+          "
+          >
+            <p>navItems</p>
+            <p>navItems</p>
+            <p>navItemss</p>
+          </div>
         </div>
       </section>
     </>
