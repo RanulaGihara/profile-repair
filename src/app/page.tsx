@@ -163,8 +163,7 @@ export default function Home() {
           {/* Vertical Divider (visible only on desktop) */}
           <div
             className="
-            hidden md:block
-     absolute
+            hidden md:block absolute
             left-1/2
             top-0
             bottom-0
